@@ -3,6 +3,13 @@ set term='xterm-color'
 if $COLORTERM == 'gnome-terminal'
 	set t_Co=256
 endif
+let s:vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+if !filereadable(s:vundle_readme)
+   echo "Installing Vundle..\n"
+   silent !mkdir -p ~/.vim/bundle
+   silent !git clone git://github.com/gmarik/vundle ~/.vim/bundle/vundle
+endif
+
 set synmaxcol=800
 set t_Co=256
 set background=dark
@@ -18,13 +25,14 @@ set ts=4
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
-set rtp+=~/.vim/bundle
+set rtp+=~/.vim/bundle/
 call vundle#rc()
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'kien/ctrlp.vim'
 filetype plugin indent on
+
 
 "indentation width
 set sw=4
