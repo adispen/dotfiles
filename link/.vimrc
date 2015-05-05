@@ -10,15 +10,7 @@ if !filereadable(s:vundle_readme)
    silent !git clone git://github.com/gmarik/vundle ~/.vim/bundle/vundle
 endif
 
-set synmaxcol=800
-set t_Co=256
-set background=dark
-let g:badwolf_darkgutter=0
-let g:badwolf_css_props_highlight=1
-let g:badwolf_tabline=1
-let g:badwolf_html_link_underline=1
-colorscheme badwolf
-set number
+
 "tab size
 set ts=4
 
@@ -31,8 +23,19 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'sjl/Badwolf'
 filetype plugin indent on
 
+set synmaxcol=800
+set t_Co=256
+set background=dark
+let g:badwolf_darkgutter=0
+let g:badwolf_css_props_highlight=1
+let g:badwolf_tabline=1
+let g:badwolf_html_link_underline=1
+colorscheme badwolf
+set number
 
 "indentation width
 set sw=4
