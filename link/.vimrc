@@ -19,6 +19,7 @@ let g:badwolf_tabline=1
 let g:badwolf_html_link_underline=1
 colorscheme badwolf
 set number
+
 "tab size
 set ts=4
 
@@ -31,6 +32,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-surround'
 filetype plugin indent on
 
 
