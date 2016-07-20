@@ -11,7 +11,9 @@ if !filereadable(s:vundle_readme)
 endif
 
 "tab size
-set ts=4
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 set nocompatible
 filetype off
@@ -24,6 +26,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'sjl/Badwolf'
+Bundle 'fatih/vim-go'
 filetype plugin indent on
 
 set synmaxcol=800
