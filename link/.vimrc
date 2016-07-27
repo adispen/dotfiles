@@ -15,6 +15,11 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" tell it to use an undo file
+set undofile
+" set a directory to store the undo history
+set undodir=/home/ad778/.vimundo/
+
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
