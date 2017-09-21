@@ -1,5 +1,4 @@
 syntax on
-set term='xterm-color'
 if $COLORTERM == 'gnome-terminal'
 	set t_Co=256
 endif
@@ -32,6 +31,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'sjl/Badwolf'
 Bundle 'fatih/vim-go'
+Bundle 'davidhalter/jedi-vim'
 filetype plugin indent on
 
 set synmaxcol=800
@@ -43,6 +43,7 @@ let g:badwolf_tabline=1
 let g:badwolf_html_link_underline=1
 colorscheme badwolf
 set number
+set backspace=2
 
 "indentation width
 set sw=4
@@ -50,6 +51,8 @@ set sw=4
 "c like indentation
 set cindent
 
+"jedi settings
+let g:jedi#use_splits_not_buffers = "left"
 
 "autocomplete menu
 set wildmenu
